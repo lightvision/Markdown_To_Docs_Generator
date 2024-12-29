@@ -1,0 +1,14 @@
+# This file maps between the source and output directories
+# It is not mandatory to use it, but it allows you a degree of customization
+#
+# If you are not create a maping then your folder name from sources will become your output folder in output, as well as document name
+map:
+  - source: "sources/sample/"
+    output: "output/sample/"
+    formats:
+      - docx:
+          output_name: "Custom Docx Name"
+      - pdf:
+          output_name: "Custom Pdf Name"
+      - pptx:
+          output_name: "Custom Pptx Name"
