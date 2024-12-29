@@ -1,0 +1,7 @@
+# Fișiere temporare
+*.tmp
+*.log
+
+# Fișiere specifice editorului
+.vscode/
+.idea/
