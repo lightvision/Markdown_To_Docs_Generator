@@ -12,3 +12,4 @@ help:
 	@echo "This is also equivalent with running:"
 	@echo "docker compose run --rm docbuilder help"
 	@echo ""
+        @echo ""
