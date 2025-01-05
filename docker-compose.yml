@@ -1,0 +1,18 @@
+services:
+  docbuilder:
+    build:
+      context: .
+      dockerfile: docbuilder/Dockerfile
+    container_name: docbuilder
+    env_file: ./docbuilder/.env
+    environment:
+      - WORKDIR=/data
+    working_dir: ${WORKDIR:-/data}
+    volumes:
+      - ./Makefile:${WORKDIR:-/data}/Makefile
+      - ./docbuilder.yml:${WORKDIR:-/data}/docbuilder.yml
+      - ./sources:${WORKDIR:-/data}/sources
+      - ./styles:${WORKDIR:-/data}/styles
+      - ./output:${WORKDIR:-/data}/output
+      - ./filters:${WORKDIR:-/data}/filters
+    entrypoint: ["make"]
