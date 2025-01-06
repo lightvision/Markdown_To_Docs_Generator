@@ -10,7 +10,8 @@ services:
     working_dir: ${WORKDIR:-/data}
     volumes:
       - ./Makefile:${WORKDIR:-/data}/Makefile
-      - ./docbuilder.yml:${WORKDIR:-/data}/docbuilder.yml
+#      - ./docbuilder.yml:${WORKDIR:-/data}/docbuilder.yml
+      - ./docbuilder:${WORKDIR:-/data}/docbuilder:ro
       - ./sources:${WORKDIR:-/data}/sources
       - ./styles:${WORKDIR:-/data}/styles
       - ./output:${WORKDIR:-/data}/output
